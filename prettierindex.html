@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Molly-land </title>
+    <link rel="stylesheet" type="text/css" href="prettierindex.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <button id="dark-mode-button" onclick="toggleNightMode()">Switch to Night Mode</button>   
+    <script src="gifts.js"></script>  
+</head>
+
+<script>
+    document.getElementById('dark-mode-button').onclick = function() {
+        document.body.classList.toggle('dark-mode');
+        this.textContent = document.body.classList.contains('dark-mode') 
+            ? 'Switch to Day Mode' 
+            : 'Switch to Night Mode';
+    }
+    </script>
+
+<body>
+    <div class="center">
+        <h1 class="greetings"> Nice to meet ya!</h1>
+        <h2> Please provide treats, hooman!</h2>
+    </div>
+
+    <div class="center-content">
+        <div class="cat-and-treats">
+            <img id="cat-image" src="IMG_Molly.png" class="cat-image" alt="A white fluffy cat snuggling in a pink fluffy cat bed">
+        
+            <form class="check-list">
+                <input type="checkbox" id="Treats" value="Treats">
+                <label for="Treats">Treats</label><br>
+                <input type="checkbox" id="Pets" value="Pets">
+                <label for="Pets">Pets</label><br>
+                <input type="checkbox" id="Belly rubs" value="Belly rubs">
+                <label for="Belly rubs">Belly rubs</label><br>
+                <input type="checkbox" id="Double treats" value="Double treats">
+                <label for="Double treats">Double treats</label><br>
+                <input type="button"  id="submit-button" value="Submit gifts" onclick="handleButtonClick();">
+                <br>
+                <script>
+                    function handleButtonClick() {
+                        createConfetti();
+                        submitGifts();
+                    }
+                    </script>
+
+                <div id="thank-you-message"></div>
+            </form>
+        </div>   
+    </div>
+
+    <h3 class="schedule-heading">As a stay at home cat, I obviously have a very busy schedule! <br>
+        Please refer to the table below to check my daily activities:</h3>
+    
+
+    <table class="schedule-table">
+    <tr>
+        <th>Morning</th>
+        <th>Noon</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+    </tr>
+    <tr>
+        <td>Beauty sleep.</td>
+        <td>Get attention by any means.</td>
+        <td>Stinky poop just as hoomans sit for dinner.</td>
+        <td>Race with imaginary friends at 3:55am ish.</td>
+    </tr>
+    </table>
+
+    <h3 class="suggestion-heading">Alright, my time is valuable, so go entertain yourself with some of my fav suggestions:</h3>
+    <a href="https://www.youtube.com/watch?v=Mr292PG5vs8&t=442s" target="_blank">My fav game!</a>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Mr292PG5vs8" title="CAT GAMES - 🐟 CATCHING FISH 1 HOUR VERSION (VIDEOS FOR CATS TO WATCH)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+    </html>
